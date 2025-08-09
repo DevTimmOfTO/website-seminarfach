@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diabetes bei Schülern — Startseite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Moderne, helle Startseite zum Thema 'Diabetes bei Schülern' — geeignet für Seminarfacharbeit" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <div class="max-w-7xl mx-auto py-12 px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+      <!-- LEFT: Main content column (spans 2 on large screens) -->
+      <main class="lg:col-span-2 bg-white rounded-2xl shadow-sm p-8">
+        <!-- Hero / Intro -->
+        <section class="flex flex-col lg:flex-row gap-6">
+          <div class="flex-1">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Willkommen!</h1>
+            <p class="text-lg leading-relaxed text-gray-600 mb-6">Herzlich willkommen zur Seminarfacharbeit über <strong>Diabetes bei Schülern</strong>. Diese Seite bietet praxisnahe Hinweise, Notfallinformationen und weiterführende Medien, damit Schulalltag und Gesundheit besser zusammenpassen.</p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+              <a href="#notfall" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500" style="background-color:#20c7b6; color:white;">
+                <!-- Icon: heart pulse -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h.01M15 12h.01M12 3v18" />
+                </svg>
+                <span class="font-medium">Notfallhilfe</span>
+              </a>
+
+              <a href="#tipps" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500" style="background-color:#20c7b6; color:white;">
+                <!-- Icon: book open -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 6V4a2 2 0 00-2-2H7a2 2 0 00-2 2v2" />
+                </svg>
+                <span class="font-medium">Tipps für die Schule</span>
+              </a>
+
+              <a href="#podcast" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500" style="background-color:#20c7b6; color:white;">
+                <!-- Icon: podcast -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A2 2 0 0122 9.618V14.38a2 2 0 01-2.447 1.894L15 14v-4z" />
+                </svg>
+                <span class="font-medium">Podcast &amp; Medien</span>
+              </a>
+            </div>
+
+            <!-- Quote -->
+            <blockquote class="border-l-4 border-turquoise-300 pl-4 italic text-gray-600">"Mit dem richtigen Wissen lässt sich der Schulalltag sicher und selbstbestimmt meistern."</blockquote>
+          </div>
+
+          <!-- On smaller screens we show the image under content; on large screens the right column contains it -->
+        </section>
+
+        <!-- Three-column features -->
+        <section class="mt-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Was ist Diabetes?</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Stoffwechselerkrankung mit erhöhtem Blutzucker</li>
+                <li>Typ-1- und Typ-2-Unterschiede</li>
+                <li>Symptome und Diagnose</li>
+              </ul>
+            </article>
+
+            <article class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Leben mit Diabetes</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Monitoring &amp; Sensoren</li>
+                <li>Blutzucker-Management in der Schule</li>
+                <li>Ernährung und Bewegung</li>
+              </ul>
+            </article>
+
+            <article id="notfall" class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">Notfallhilfe</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Erkennen von Hypo- und Hyperglykämie</li>
+                <li>Erste Hilfe &amp; Kontaktpersonen</li>
+                <li>Notfallplan für die Schule</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- RIGHT: Image + Vertical Navigation -->
+      <aside class="flex flex-col gap-6 items-stretch">
+        <!-- Card with image and vertical nav side-by-side on wide screens -->
+        <div class="bg-white rounded-2xl shadow-sm p-4 flex flex-col sm:flex-row items-center gap-4">
+          <!-- Photo -->
+          <div class="flex-shrink-0 w-full sm:w-48">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b5e4b0a2f3e1c4f3d6b1a4b9e2a8a1e" alt="Lächelnder Jugendlicher mit Diabetes-Sensor am Oberarm" class="rounded-xl w-full h-auto object-cover shadow-sm" />
+            <!-- Hinweis: für die Seminararbeit sollten Sie ein lizenziertes / selbst aufgenommenes Foto verwenden. -->
+          </div>
+
+          <!-- Vertical navigation -->
+          <nav aria-label="Sekundäre Navigation" class="w-full">
+            <ul class="bg-white border rounded-lg divide-y">
+              <li class="px-4 py-3 text-black font-medium">Startseite</li>
+              <li class="px-4 py-3 text-black">Über Diabetes</li>
+              <li class="px-4 py-3 text-black">Tipps für Lehrer</li>
+              <li class="px-4 py-3 text-black">Materialien</li>
+              <li class="px-4 py-3 text-black">Kontakt</li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Small helper card for accessibility / quick links -->
+        <div class="bg-white rounded-lg p-4 shadow-sm">
+          <h4 class="font-semibold mb-2">Schnellzugriff</h4>
+          <ul class="text-gray-600 space-y-1">
+            <li><a href="#notfall" class="underline">Notfallplan anzeigen</a></li>
+            <li><a href="#tipps" class="underline">Tipps für die Schule</a></li>
+            <li><a href="#podcast" class="underline">Podcast &amp; Medien</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto px-6 pb-12 text-sm text-gray-500">
+    <p>© Seminarfacharbeit — Thema: Diabetes bei Schülern. <!-- Optional: Impressum / Quellen hier einfügen --> </p>
+  </footer>
+
+</body>
+</html>
