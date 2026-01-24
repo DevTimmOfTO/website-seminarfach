@@ -8,105 +8,135 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="description"
-    content="Moderne, helle Startseite zum Thema 'Diabetes bei Schülern' — geeignet für Seminarfacharbeit" />
+    content="Eine wissenschaftlich fundierte Informationsplattform für Schüler, Lehrkräfte und Eltern.
+          Hier finden Sie evidenzbasierte Informationen, praktische Hilfestellungen und wertvolle
+          Ressourcen für einen sicheren Schulalltag mit Diabetes." />
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
   <div class="max-w-7xl mx-auto py-12 px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-br from-teal-600 via-teal-500 to-cyan-400 rounded-3xl shadow-xl overflow-hidden mb-12">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+      </div>
 
-      <!-- LEFT: Main content column (spans 2 on large screens) -->
-      <main class="lg:col-span-3 bg-white rounded-2xl shadow-sm p-8">
-        <!-- Hero / Intro -->
-        <section class="flex flex-col lg:flex-row gap-6">
-          <div class="flex-1">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Willkommen!</h1>
-            <p class="text-lg leading-relaxed text-gray-600 mb-6">Herzlich willkommen zur Seminarfacharbeit über
-              <strong>Diabetes bei Schülern</strong>. Diese Seite bietet praxisnahe Hinweise, Notfallinformationen und
-              weiterführende Medien, damit Schulalltag und Gesundheit besser zusammenpassen.</p>
+      <div class="relative z-10 px-8 py-16 md:py-20 text-center">
+        <span class="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
+          Seminarfacharbeit 2024/25
+        </span>
 
-            <!-- Buttons -->
-<div class="flex flex-col items-center sm:flex-row sm:justify-center gap-4 mb-6">
-  <a href="#Notfallprotokoll" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
-    style="background-color:#20c7b6; color:white;">
-    <!-- Icon: heart pulse -->
-    <span class="material-symbols-outlined">e911_emergency</span>
-    <span class="font-medium">Notfallhilfe</span>
-  </a>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+          Diabetes bei Schülern
+        </h1>
 
-  <a href="#tipps" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
-    style="background-color:#20c7b6; color:white;">
-    <!-- Icon: book open -->
-    <span class="material-symbols-outlined">
-      school
-    </span>
-    <span class="font-medium">Tipps für die Schule</span>
-  </a>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed mb-8">
+          Eine wissenschaftlich fundierte Informationsplattform für Schüler, Lehrkräfte und Eltern.
+          Hier finden Sie evidenzbasierte Informationen, praktische Hilfestellungen und wertvolle
+          Ressourcen für einen sicheren Schulalltag mit Diabetes.
+        </p>
 
-  <a href="#podcast" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
-    style="background-color:#20c7b6; color:white;">
-    <!-- Icon: podcast -->
-    <span class="material-symbols-outlined">
-      podcasts
-    </span>
-    <span class="font-medium">Podcast &amp; Medien</span>
-  </a>
+        <!-- Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <a href="#Notfallprotokoll"
+             class="group inline-flex items-center gap-3 px-6 py-3 bg-white text-teal-700 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <span class="material-symbols-outlined text-red-500">e911_emergency</span>
+            <span>Notfallprotokoll</span>
+          </a>
 
-  <a href="#blutzucker-check" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
-    style="background-color:#20c7b6; color:white;">
-    <!-- Icon: blood sugar check -->
-    <span class="material-symbols-outlined">
-      monitor_heart
-    </span>
-    <span class="font-medium">Blutzucker-Check</span>
-  </a>
-</div>
+          <a href="#tipps"
+             class="group inline-flex items-center gap-3 px-6 py-3 bg-white/15 backdrop-blur-sm text-white border border-white/30 rounded-xl font-medium hover:bg-white/25 hover:scale-105 transition-all duration-300">
+            <span class="material-symbols-outlined">school</span>
+            <span>Tipps für die Schule</span>
+          </a>
 
-            <!-- Quote -->
-            <blockquote class="border-l-4 border-turquoise-300 pl-4 italic text-gray-600">"Mit dem richtigen Wissen
-              lässt sich der Schulalltag sicher und selbstbestimmt meistern."</blockquote>
+          <a href="#podcast"
+             class="group inline-flex items-center gap-3 px-6 py-3 bg-white/15 backdrop-blur-sm text-white border border-white/30 rounded-xl font-medium hover:bg-white/25 hover:scale-105 transition-all duration-300">
+            <span class="material-symbols-outlined">podcasts</span>
+            <span>Podcast &amp; Medien</span>
+          </a>
+
+          <a href="#blutzucker-check"
+             class="group inline-flex items-center gap-3 px-6 py-3 bg-white/15 backdrop-blur-sm text-white border border-white/30 rounded-xl font-medium hover:bg-white/25 hover:scale-105 transition-all duration-300">
+            <span class="material-symbols-outlined">monitor_heart</span>
+            <span>Blutzucker-Check</span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="animate-bounce">
+          <span class="material-symbols-outlined text-white/70 text-3xl">expand_more</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Introduction Card -->
+    <main class="bg-white rounded-2xl shadow-sm p-8 mb-12">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Herzlich willkommen</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Diese Webseite entstand im Rahmen einer Seminarfacharbeit mit dem Ziel, verlässliche und
+          verständliche Informationen über Diabetes mellitus im schulischen Kontext bereitzustellen.
+          Alle Inhalte wurden sorgfältig recherchiert und orientieren sich an aktuellen medizinischen
+          Leitlinien der Deutschen Diabetes Gesellschaft (DDG).
+        </p>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="#ueber-diabetes" class="group bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:border-teal-300 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition-colors">
+            <span class="material-symbols-outlined text-teal-600">biotech</span>
           </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Was ist Diabetes?</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Grundlagen der Erkrankung, Unterschiede zwischen Typ-1 und Typ-2,
+            sowie aktuelle epidemiologische Daten.
+          </p>
+          <span class="inline-flex items-center gap-1 text-teal-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+            Mehr erfahren <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </a>
 
-          <!-- On smaller screens we show the image under content; on large screens the right column contains it -->
-        </section>
-
-        <!-- Three-column features -->
-        <section class="mt-10">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold mb-2">Was ist Diabetes?</h3>
-              <ul class="list-disc list-inside text-gray-600 space-y-1">
-                <li>Stoffwechsel- erkrankung mit erhöhtem Blutzucker</li>
-                <li>Typ-1- und Typ-2-Unterschiede</li>
-                <li>Symptome und Diagnose</li>
-              </ul>
-            </article>
-
-            <article class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold mb-2">Leben mit Diabetes</h3>
-              <ul class="list-disc list-inside text-gray-600 space-y-1">
-                <li>Monitoring &amp; Sensoren</li>
-                <li>Blutzucker-Management in der Schule</li>
-                <li>Ernährung und Bewegung</li>
-              </ul>
-            </article>
-
-            <article id="notfall" class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold mb-2">Notfallhilfe</h3>
-              <ul class="list-disc list-inside text-gray-600 space-y-1">
-                <li>Erkennen von Hypo- und Hyperglykämie</li>
-                <li>Erste Hilfe &amp; Kontaktpersonen</li>
-                <li>Notfallplan für die Schule</li>
-              </ul>
-            </article>
+        <a href="#tipps" class="group bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:border-teal-300 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-200 transition-colors">
+            <span class="material-symbols-outlined text-cyan-600">school</span>
           </div>
-        </section>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Leben mit Diabetes</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Praktische Hinweise für den Schulalltag, Blutzucker-Management,
+            Ernährung und körperliche Aktivität.
+          </p>
+          <span class="inline-flex items-center gap-1 text-teal-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+            Mehr erfahren <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </a>
 
-      </main>
+        <a href="#Notfallprotokoll" class="group bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl border border-red-200 hover:border-red-300 hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
+            <span class="material-symbols-outlined text-red-600">emergency</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Notfallhilfe</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Erkennen von Hypo- und Hyperglykämie, Erste-Hilfe-Maßnahmen
+            und strukturierte Notfallprotokolle.
+          </p>
+          <span class="inline-flex items-center gap-1 text-red-600 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+            Zum Notfallprotokoll <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </a>
+      </div>
 
-
-
-    </div>
+      <!-- Quote -->
+      <blockquote class="mt-10 max-w-2xl mx-auto text-center">
+        <p class="text-lg italic text-gray-600 mb-2">
+          „Mit fundiertem Wissen und guter Vorbereitung lässt sich der Schulalltag
+          auch mit Diabetes sicher und selbstbestimmt gestalten."
+        </p>
+        <cite class="text-sm text-gray-400">— Leitgedanke dieser Seminarfacharbeit</cite>
+      </blockquote>
+    </main>
 
     <!-- Über Diabetes -->
     <section id="ueber-diabetes" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
