@@ -27,7 +27,7 @@
 
             <!-- Buttons -->
 <div class="flex flex-col items-center sm:flex-row sm:justify-center gap-4 mb-6">
-  <a href="#notfallhilfe" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
+  <a href="#Notfallprotokoll" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
     style="background-color:#20c7b6; color:white;">
     <!-- Icon: heart pulse -->
     <span class="material-symbols-outlined">e911_emergency</span>
@@ -50,6 +50,15 @@
       podcasts
     </span>
     <span class="font-medium">Podcast &amp; Medien</span>
+  </a>
+
+  <a href="#blutzucker-check" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-turquoise-500"
+    style="background-color:#20c7b6; color:white;">
+    <!-- Icon: blood sugar check -->
+    <span class="material-symbols-outlined">
+      monitor_heart
+    </span>
+    <span class="font-medium">Blutzucker-Check</span>
   </a>
 </div>
 
@@ -98,119 +107,1283 @@
 
 
     </div>
-    <!-- Über Diabetes -->
+
     <!-- Über Diabetes -->
     <section id="ueber-diabetes" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-      <h2 class="text-2xl font-bold mb-4">Über Diabetes</h2>
-      <p class="text-gray-600 mb-4">
-        Unter dem Begriff <strong>Diabetes mellitus</strong> versteht man eine Gruppe chronischer
-        Stoffwechselerkrankungen,
-        die durch eine <em>Hyperglykämie</em> (dauerhaft erhöhter Blutzuckerspiegel) gekennzeichnet sind.
-        Ursache ist eine Störung im <strong>Insulin-Stoffwechsel</strong>. Insulin ist ein Hormon der
-        Bauchspeicheldrüse,
-        das dafür sorgt, dass Glukose (Zucker) aus dem Blut in die Körperzellen aufgenommen wird.
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-4xl" style="color:#20c7b6;">biotech</span>
+        <h2 class="text-2xl font-bold">Über Diabetes mellitus</h2>
+      </div>
+
+      <p class="text-gray-600 mb-6">
+        Diabetes mellitus bezeichnet eine heterogene Gruppe chronischer Stoffwechselerkrankungen, die durch eine
+        persistierende Hyperglykämie (erhöhte Blutglukosekonzentration) charakterisiert sind. Die Pathogenese
+        beruht auf Defekten der Insulinsekretion, der Insulinwirkung oder einer Kombination beider Faktoren.
+        Die folgenden Informationen basieren auf aktuellen Leitlinien der Deutschen Diabetes Gesellschaft (DDG),
+        der American Diabetes Association (ADA) sowie internationalen Forschungserkenntnissen.
       </p>
-      <p class="text-gray-600 mb-4">
-        Man unterscheidet vor allem zwei Formen:
+
+      <!-- Globale Statistiken -->
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 mb-8 border-l-4" style="border-color:#20c7b6;">
+        <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">public</span>
+          Globale und nationale Statistiken
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">537 Mio.</p>
+            <p class="text-gray-600">Menschen weltweit leben mit Diabetes (20-79 Jahre)</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: IDF Diabetes Atlas, 2021</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">~8,5 Mio.</p>
+            <p class="text-gray-600">Menschen mit diagnostiziertem Diabetes in Deutschland</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: RKI, 2023</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">~2 Mio.</p>
+            <p class="text-gray-600">Dunkelziffer unentdeckter Diabetesfälle in Deutschland</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: DDG Gesundheitsbericht, 2023</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">6,7 Mio.</p>
+            <p class="text-gray-600">Todesfälle weltweit durch Diabetes-Komplikationen (2021)</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: WHO Global Report</p>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-3 shadow-sm text-center">
+            <p class="text-lg font-bold text-purple-600">~32.000</p>
+            <p class="text-gray-600 text-xs">Kinder/Jugendliche &lt; 20 Jahre mit Typ-1-Diabetes in Deutschland</p>
+          </div>
+          <div class="bg-white rounded-lg p-3 shadow-sm text-center">
+            <p class="text-lg font-bold text-blue-600">90-95%</p>
+            <p class="text-gray-600 text-xs">aller Diabetesfälle sind Typ-2-Diabetes</p>
+          </div>
+          <div class="bg-white rounded-lg p-3 shadow-sm text-center">
+            <p class="text-lg font-bold text-orange-600">+46%</p>
+            <p class="text-gray-600 text-xs">prognostizierter Anstieg bis 2045 (weltweit)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICD-10 Klassifikation -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">category</span>
+          ICD-10 Klassifikation des Diabetes mellitus
+        </h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Die Internationale statistische Klassifikation der Krankheiten (ICD-10) der WHO ordnet Diabetes mellitus
+          in die Kategorie E10-E14 ein. Diese Klassifikation ist für die medizinische Dokumentation und Abrechnung
+          in Deutschland verbindlich.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b-2 border-gray-300 bg-gray-100">
+                <th class="text-left py-3 px-4 font-semibold">ICD-10 Code</th>
+                <th class="text-left py-3 px-4 font-semibold">Bezeichnung</th>
+                <th class="text-left py-3 px-4 font-semibold">Beschreibung</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600">
+              <tr class="border-b border-gray-200">
+                <td class="py-3 px-4 font-mono font-semibold text-purple-600">E10.-</td>
+                <td class="py-3 px-4 font-medium">Typ-1-Diabetes mellitus</td>
+                <td class="py-3 px-4 text-xs">Primär insulinabhängig, autoimmun bedingt</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 px-4 font-mono font-semibold text-blue-600">E11.-</td>
+                <td class="py-3 px-4 font-medium">Typ-2-Diabetes mellitus</td>
+                <td class="py-3 px-4 text-xs">Primär nicht insulinabhängig, Insulinresistenz</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 px-4 font-mono font-semibold text-green-600">E12.-</td>
+                <td class="py-3 px-4 font-medium">Diabetes durch Fehl-/Mangelernährung</td>
+                <td class="py-3 px-4 text-xs">Malnutritionsbedingter Diabetes (selten)</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 px-4 font-mono font-semibold text-orange-600">E13.-</td>
+                <td class="py-3 px-4 font-medium">Sonstiger näher bezeichneter Diabetes</td>
+                <td class="py-3 px-4 text-xs">MODY, medikamenteninduziert, genetische Syndrome</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-mono font-semibold text-pink-600">E14.-</td>
+                <td class="py-3 px-4 font-medium">Nicht näher bezeichneter Diabetes</td>
+                <td class="py-3 px-4 text-xs">Wenn Typ nicht spezifiziert werden kann</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-500 mt-3">
+          Hinweis: Die vierte Stelle (nach dem Punkt) kodiert Komplikationen: .0 = Koma, .1 = Ketoazidose,
+          .2 = Nierenkomplikationen, .3 = Augenkomplikationen, .4 = neurologische Komplikationen, etc.
+        </p>
+      </div>
+
+      <!-- Typ-1 vs Typ-2 Vergleich -->
+      <h3 class="font-bold text-gray-800 mb-4 text-lg">Differenzierung: Typ-1- vs. Typ-2-Diabetes</h3>
+      <p class="text-gray-600 mb-6 text-sm">
+        Obwohl beide Formen durch Hyperglykämie gekennzeichnet sind, unterscheiden sie sich grundlegend in
+        Pathogenese, Epidemiologie und Therapieansätzen. Die folgende Gegenüberstellung basiert auf den
+        aktuellen Leitlinien der DDG und ADA.
       </p>
-      <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-        <li><strong>Typ-1-Diabetes</strong>: Autoimmunerkrankung, bei der die körpereigenen Abwehrzellen die
-          insulinproduzierenden
-          Betazellen zerstören. Typisch: Beginn im Kindes- und Jugendalter. Patienten sind lebenslang auf Insulin
-          angewiesen.</li>
-        <li><strong>Typ-2-Diabetes</strong>: Häufig bei Erwachsenen, zunehmend aber auch bei Jugendlichen. Ursache ist
-          eine
-          <em>Insulinresistenz</em>, d. h. die Körperzellen reagieren nicht mehr ausreichend auf Insulin. Risikofaktoren
-          sind
-          Übergewicht, Bewegungsmangel und ungesunde Ernährung.
-        </li>
-      </ul>
-      <p class="text-gray-600 mb-4">
-        Erste Symptome können <em>Polydipsie</em> (vermehrtes Durstgefühl), <em>Polyurie</em> (häufiges Wasserlassen),
-        unerklärlicher Gewichtsverlust oder Müdigkeit sein. In Deutschland sind etwa
-        <strong>32.000 Kinder und Jugendliche</strong> unter 20 Jahren von Typ-1-Diabetes betroffen (Stand: 2023).
-      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <!-- Typ-1-Diabetes -->
+        <div class="bg-purple-50 border border-purple-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-200 flex items-center justify-center">
+              <span class="text-purple-700 font-bold text-lg">T1</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-purple-800 text-lg">Typ-1-Diabetes mellitus</h4>
+              <p class="text-sm text-purple-600">ICD-10: E10.- | ca. 5-10% aller Fälle</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-purple-600">science</span>
+                Pathogenese
+              </h5>
+              <p class="text-gray-600 text-sm">
+                Autoimmunreaktion gegen die insulinproduzierenden β-Zellen der Langerhans-Inseln im Pankreas.
+                Die Zerstörung führt zu absolutem Insulinmangel. Genetische Prädisposition (HLA-Assoziation)
+                und Umweltfaktoren spielen eine Rolle.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-purple-600">groups</span>
+                Epidemiologie
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Manifestation meist im Kindes-/Jugendalter (Peak: 10-14 Jahre)</li>
+                <li>Inzidenz in Deutschland: ~22-25/100.000/Jahr bei &lt; 15-Jährigen</li>
+                <li>Keine Geschlechtspräferenz</li>
+                <li>Steigend um ca. 3-4% pro Jahr (weltweit)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-purple-600">symptoms</span>
+                Klinische Präsentation
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Akuter Beginn (Tage bis Wochen)</li>
+                <li>Polydipsie, Polyurie, Gewichtsverlust</li>
+                <li>Häufig Erstmanifestation mit Ketoazidose (DKA)</li>
+                <li>Patienten meist normalgewichtig</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-purple-600">medication</span>
+                Therapie
+              </h5>
+              <div class="bg-white rounded-lg p-3">
+                <p class="text-gray-600 text-sm">
+                  <strong>Lebenslange Insulintherapie obligat:</strong><br>
+                  • Intensivierte konventionelle Therapie (ICT) oder<br>
+                  • Kontinuierliche subkutane Insulininfusion (CSII/Pumpe)<br>
+                  • Hybrid-Closed-Loop-Systeme zunehmend Standard
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-purple-600">labs</span>
+                Diagnostische Marker
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Autoantikörper: GAD65, IA-2, ZnT8, IAA</li>
+                <li>C-Peptid niedrig/nicht nachweisbar</li>
+                <li>Ketone bei Erstmanifestation häufig positiv</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typ-2-Diabetes -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center">
+              <span class="text-blue-700 font-bold text-lg">T2</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-blue-800 text-lg">Typ-2-Diabetes mellitus</h4>
+              <p class="text-sm text-blue-600">ICD-10: E11.- | ca. 90-95% aller Fälle</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-600">science</span>
+                Pathogenese
+              </h5>
+              <p class="text-gray-600 text-sm">
+                Kombination aus Insulinresistenz der peripheren Gewebe (Muskel, Fett, Leber) und
+                progressiver β-Zell-Dysfunktion. Starke genetische Komponente, aber Lebensstilfaktoren
+                (Adipositas, Bewegungsmangel) sind Haupttreiber.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-600">groups</span>
+                Epidemiologie
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Manifestation meist &gt; 40 Jahre, zunehmend auch Jugendliche</li>
+                <li>Prävalenz in Deutschland: ca. 8-10% der Erwachsenen</li>
+                <li>Starke Assoziation mit metabolischem Syndrom</li>
+                <li>Häufiger bei niedrigem sozioökonomischem Status</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-600">symptoms</span>
+                Klinische Präsentation
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Schleichender Beginn (Monate bis Jahre)</li>
+                <li>Oft asymptomatisch (Zufallsbefund)</li>
+                <li>Müdigkeit, rezidivierende Infekte, Wundheilungsstörungen</li>
+                <li>80-90% der Patienten übergewichtig/adipös</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-600">medication</span>
+                Therapie
+              </h5>
+              <div class="bg-white rounded-lg p-3">
+                <p class="text-gray-600 text-sm">
+                  <strong>Stufentherapie nach DDG/ADA:</strong><br>
+                  1. Lebensstilmodifikation (Ernährung, Bewegung)<br>
+                  2. Orale Antidiabetika (Metformin First-Line)<br>
+                  3. Kombinationstherapie (SGLT2i, GLP-1-RA, DPP4i)<br>
+                  4. Ggf. Insulintherapie bei Progression
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-600">labs</span>
+                Diagnostische Marker
+              </h5>
+              <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Keine Autoantikörper</li>
+                <li>C-Peptid normal oder erhöht (initial)</li>
+                <li>Häufig Dyslipidämie, Hypertonie</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diagnosekriterien -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">fact_check</span>
+          Diagnosekriterien (DDG/ADA 2024)
+        </h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Die Diagnose eines Diabetes mellitus kann anhand verschiedener Kriterien gestellt werden.
+          Bei asymptomatischen Patienten ist eine Bestätigung durch eine zweite Messung erforderlich.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-red-500">
+            <h5 class="font-semibold text-gray-800 mb-2">Nüchtern-Glukose</h5>
+            <p class="text-2xl font-bold text-red-600 mb-1">≥ 126 mg/dl</p>
+            <p class="text-gray-500 text-xs">(≥ 7,0 mmol/l)</p>
+            <p class="text-gray-600 text-xs mt-2">Mind. 8h keine Kalorienzufuhr</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-orange-500">
+            <h5 class="font-semibold text-gray-800 mb-2">HbA1c</h5>
+            <p class="text-2xl font-bold text-orange-600 mb-1">≥ 6,5%</p>
+            <p class="text-gray-500 text-xs">(≥ 48 mmol/mol)</p>
+            <p class="text-gray-600 text-xs mt-2">Standardisierte Labormethode</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-yellow-500">
+            <h5 class="font-semibold text-gray-800 mb-2">oGTT (2h-Wert)</h5>
+            <p class="text-2xl font-bold text-yellow-600 mb-1">≥ 200 mg/dl</p>
+            <p class="text-gray-500 text-xs">(≥ 11,1 mmol/l)</p>
+            <p class="text-gray-600 text-xs mt-2">Nach 75g Glukosebelastung</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-purple-500">
+            <h5 class="font-semibold text-gray-800 mb-2">Gelegenheits-BZ</h5>
+            <p class="text-2xl font-bold text-purple-600 mb-1">≥ 200 mg/dl</p>
+            <p class="text-gray-500 text-xs">(≥ 11,1 mmol/l)</p>
+            <p class="text-gray-600 text-xs mt-2">+ klassische Symptome</p>
+          </div>
+        </div>
+        <div class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded-lg">
+          <p class="text-sm text-yellow-800">
+            <strong>Prädiabetes (erhöhtes Diabetesrisiko):</strong>
+            Nüchtern-Glukose 100-125 mg/dl (IFG) oder oGTT 2h-Wert 140-199 mg/dl (IGT) oder HbA1c 5,7-6,4%.
+            Bei Prädiabetes kann durch Lebensstiländerungen eine Progression zum Diabetes häufig verhindert werden.
+          </p>
+        </div>
+      </div>
+
+      <!-- Weitere Diabetesformen -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">diversity_3</span>
+          Weitere Diabetesformen
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h5 class="font-semibold text-gray-800 mb-2">Gestationsdiabetes (GDM)</h5>
+            <p class="text-gray-600 text-xs mb-2">ICD-10: O24.4</p>
+            <p class="text-gray-600">
+              Erstmals in der Schwangerschaft diagnostizierte Glukosetoleranzstörung.
+              Betrifft ca. 5-10% aller Schwangerschaften. Screening in der 24.-28. SSW empfohlen.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h5 class="font-semibold text-gray-800 mb-2">MODY (Maturity-Onset Diabetes of the Young)</h5>
+            <p class="text-gray-600 text-xs mb-2">ICD-10: E13.-</p>
+            <p class="text-gray-600">
+              Monogene Diabetesformen durch Mutationen in einzelnen Genen (z.B. HNF1A, GCK).
+              Autosomal-dominant vererbt. Manifestation meist &lt; 25 Jahre.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h5 class="font-semibold text-gray-800 mb-2">LADA (Latent Autoimmune Diabetes in Adults)</h5>
+            <p class="text-gray-600 text-xs mb-2">ICD-10: E10.-</p>
+            <p class="text-gray-600">
+              Autoimmundiabetes mit langsamer Progression bei Erwachsenen (&gt; 30 Jahre).
+              Initial oft als Typ-2 fehlklassifiziert. GAD-Antikörper positiv.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Symptome -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">medical_information</span>
+          Klassische Symptome der Hyperglykämie
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="material-symbols-outlined text-3xl mb-2" style="color:#20c7b6;">water_drop</span>
+            <h5 class="font-semibold text-gray-800">Polydipsie</h5>
+            <p class="text-gray-600 text-xs">Vermehrtes Durstgefühl durch osmotische Diurese</p>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="material-symbols-outlined text-3xl mb-2" style="color:#20c7b6;">wc</span>
+            <h5 class="font-semibold text-gray-800">Polyurie</h5>
+            <p class="text-gray-600 text-xs">Häufiges Wasserlassen, auch nachts (Nykturie)</p>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="material-symbols-outlined text-3xl mb-2" style="color:#20c7b6;">monitor_weight</span>
+            <h5 class="font-semibold text-gray-800">Gewichtsverlust</h5>
+            <p class="text-gray-600 text-xs">Ungewollter Gewichtsverlust trotz normaler Nahrungsaufnahme</p>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <span class="material-symbols-outlined text-3xl mb-2" style="color:#20c7b6;">battery_low</span>
+            <h5 class="font-semibold text-gray-800">Müdigkeit</h5>
+            <p class="text-gray-600 text-xs">Ausgeprägte Erschöpfung und Leistungsminderung</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 mt-4 italic">
+          Weitere mögliche Symptome: Sehstörungen, Wundheilungsstörungen, rezidivierende Infektionen (v.a. Harnwege, Haut),
+          Juckreiz, Mundtrockenheit. Bei Typ-2-Diabetes können Symptome über Jahre fehlen oder mild sein.
+        </p>
+      </div>
+
+      <!-- Quellenangaben -->
+      <div class="border-t border-gray-200 pt-6">
+        <h3 class="font-semibold text-gray-700 mb-3 text-sm">Wissenschaftliche Quellen</h3>
+        <ul class="text-xs text-gray-500 space-y-1">
+          <li>• Deutsche Diabetes Gesellschaft (DDG): Nationale VersorgungsLeitlinie Typ-2-Diabetes, 2023</li>
+          <li>• Deutsche Diabetes Gesellschaft (DDG): S3-Leitlinie Therapie des Typ-1-Diabetes, 2023</li>
+          <li>• American Diabetes Association (ADA): Standards of Care in Diabetes, 2024</li>
+          <li>• International Diabetes Federation (IDF): Diabetes Atlas, 10th Edition, 2021</li>
+          <li>• Robert Koch-Institut (RKI): Diabetes-Surveillance in Deutschland, 2023</li>
+          <li>• World Health Organization (WHO): Classification of Diabetes mellitus, 2019</li>
+          <li>• Harvard T.H. Chan School of Public Health: The Nutrition Source – Diabetes</li>
+          <li>• Johns Hopkins Medicine: Diabetes Center – Patient Education Resources</li>
+        </ul>
+        <p class="text-xs text-gray-400 mt-3 italic">
+          Hinweis: Die hier bereitgestellten Informationen dienen der allgemeinen Aufklärung und ersetzen
+          keine ärztliche Beratung oder Diagnose. Bei Verdacht auf Diabetes mellitus wenden Sie sich bitte
+          an Ihren Hausarzt oder eine diabetologische Fachpraxis.
+        </p>
+      </div>
     </section>
 
     <!-- Leben mit Diabetes -->
     <section id="leben" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-      <h2 class="text-2xl font-bold mb-4">Leben mit Diabetes</h2>
-      <p class="text-gray-600 mb-4">
-        Schüler mit Diabetes müssen ihren Blutzucker im Alltag regelmäßig messen. Moderne Hilfsmittel wie
-        <strong>CGM-Systeme (Continuous Glucose Monitoring)</strong> oder <strong>Insulinpumpen</strong> erleichtern
-        die Therapie erheblich. Die Werte werden dabei meist digital erfasst und können auf dem Smartphone
-        oder einer Uhr abgelesen werden.
-      </p>
-      <p class="text-gray-600 mb-4">
-        In der Schule ist es wichtig, dass Schüler ungehindert messen, essen oder Insulin spritzen dürfen.
-        Lehrkräfte sollten akzeptieren, dass manchmal ein Getränk im Unterricht nötig ist. Sport und Bewegung
-        können den Blutzuckerspiegel senken – deswegen müssen Schüler vor dem Sportunterricht eventuell
-        zusätzliche Kohlenhydrate zu sich nehmen.
-      </p>
-      <p class="text-gray-600 mb-4">
-        Eine ausgewogene Ernährung (komplexe Kohlenhydrate, Vollkornprodukte, Gemüse) stabilisiert die Blutzuckerwerte.
-        Zu viele schnelle Zucker (z. B. Cola, Schokolade) können dagegen starke Schwankungen verursachen.
-        Eine gute Balance ist daher entscheidend.
-      </p>
-    </section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-4xl" style="color:#20c7b6;">favorite</span>
+        <h2 class="text-2xl font-bold">Leben mit Diabetes im Alltag</h2>
+      </div>
 
-    <!-- Notfallhilfen -->
-    <section id="notfallhilfe" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-      <h2 class="text-2xl font-bold mb-4">Notfallhilfen im Schulalltag</h2>
-      <p class="text-gray-600 mb-4">
-        Notfälle können jederzeit auftreten, wenn der Blutzuckerspiegel stark abweicht.
-        Bei einer <strong>Hypoglykämie</strong> (Unterzuckerung, &lt; 70 mg/dl) treten meist Symptome wie
-        Zittern, Schwitzen, Herzrasen, Konzentrationsprobleme oder sogar Bewusstseinsstörungen auf.
-        Bei einer <strong>Hyperglykämie</strong> (Überzuckerung, &gt; 180 mg/dl) können starker Durst, Kopfschmerzen
-        oder Übelkeit auftreten. Ohne Behandlung droht im Extremfall ein diabetisches Koma.
-      </p>
-      <p class="text-gray-600 mb-4">
-        Für Lehrer und Mitschüler gilt: Bei Unterzuckerung sofort <strong>Traubenzucker</strong> oder ein süßes Getränk
-        geben.
-        Bei Überzuckerung muss der Schüler meist zusätzlich Insulin spritzen – hier helfen die Eltern oder ein Arzt.
-        Wichtig: Jeder Schüler mit Diabetes sollte einen <strong>Notfallausweis</strong> oder einen
-        <strong>individuellen Notfallplan</strong> in der Schule hinterlegt haben.
-      </p>
-      <p class="text-gray-600 mb-4">
-        Notfallkontakte (Eltern, Arzt) sollten immer griffbereit sein. Bei schweren Symptomen (z. B. Bewusstlosigkeit)
-        sofort den <strong>Notruf 112</strong> wählen und Erste Hilfe leisten.
+      <p class="text-gray-600 mb-6">
+        Das Leben mit Diabetes mellitus erfordert eine kontinuierliche Selbstmanagement-Strategie, die an die
+        jeweilige Lebensphase angepasst werden muss. Die folgenden Empfehlungen basieren auf aktuellen Leitlinien
+        der Deutschen Diabetes Gesellschaft (DDG), der American Diabetes Association (ADA) sowie internationalen
+        Forschungserkenntnissen.
       </p>
 
+      <!-- Moderne Technologien -->
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 mb-8 border-l-4" style="border-color:#20c7b6;">
+        <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">devices</span>
+          Moderne Therapietechnologien
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h4 class="font-semibold text-gray-800 mb-2">CGM-Systeme</h4>
+            <p class="text-gray-600 mb-2">Continuous Glucose Monitoring misst den Glukosegehalt im Unterhautfettgewebe alle 1-5 Minuten.</p>
+            <p class="text-xs text-gray-500">Studien zeigen eine HbA1c-Reduktion um 0,3-0,6% (DDG, 2023)</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h4 class="font-semibold text-gray-800 mb-2">Insulinpumpen</h4>
+            <p class="text-gray-600 mb-2">Kontinuierliche subkutane Insulininfusion (CSII) ermöglicht eine präzisere Basalratensteuerung.</p>
+            <p class="text-xs text-gray-500">Reduktion schwerer Hypoglykämien um bis zu 50% (ADA, 2024)</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <h4 class="font-semibold text-gray-800 mb-2">Hybrid-Closed-Loop</h4>
+            <p class="text-gray-600 mb-2">Automatisierte Insulindosierung („künstliche Bauchspeicheldrüse") passt Insulin selbstständig an.</p>
+            <p class="text-xs text-gray-500">Time-in-Range-Verbesserung auf 70-80% (ISPAD, 2022)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Altersgruppen -->
+      <h3 class="font-bold text-gray-800 mb-4 text-lg">Diabetes-Management nach Altersgruppen</h3>
+      <p class="text-gray-600 mb-6 text-sm">
+        Die Anforderungen an das Diabetes-Management unterscheiden sich je nach Entwicklungsphase erheblich.
+        Die International Society for Pediatric and Adolescent Diabetes (ISPAD) und die ADA empfehlen
+        altersspezifische Therapieziele und Strategien.
+      </p>
+
+      <!-- Kleinkinder und Kinder -->
+      <div class="bg-purple-50 border border-purple-200 rounded-xl p-6 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-3xl text-purple-600">child_care</span>
+          <div>
+            <h4 class="font-bold text-purple-800 text-lg">Kleinkinder und Kinder (0-11 Jahre)</h4>
+            <p class="text-sm text-purple-600">Besondere Herausforderungen durch Wachstum und Entwicklung</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Therapieziele (ISPAD/ADA)</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>HbA1c-Zielwert: &lt; 7,0% (individuell anpassbar)</li>
+              <li>Nüchtern-Blutzucker: 70-130 mg/dl</li>
+              <li>Vermeidung schwerer Hypoglykämien (Gehirnentwicklung!)</li>
+              <li>Time-in-Range (70-180 mg/dl): &gt; 60%</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Besonderheiten im Alltag</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Unvorhersehbares Essverhalten erfordert flexible Bolusgabe</li>
+              <li>Hohe körperliche Aktivität → häufige Blutzuckerkontrollen</li>
+              <li>Eltern/Betreuungspersonen übernehmen Hauptverantwortung</li>
+              <li>Kindergarten/Grundschule: Betreuungsplan erforderlich</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-white rounded-lg p-4">
+          <h5 class="font-semibold text-gray-800 mb-2">Ernährungsempfehlungen (DDG/ADA)</h5>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <p class="font-medium text-gray-700">Kohlenhydrate</p>
+              <p class="text-gray-600">45-55% der Gesamtenergie, bevorzugt komplexe KH</p>
+            </div>
+            <div>
+              <p class="font-medium text-gray-700">Mahlzeitenfrequenz</p>
+              <p class="text-gray-600">3 Hauptmahlzeiten + 2-3 Snacks</p>
+            </div>
+            <div>
+              <p class="font-medium text-gray-700">Insulindosierung</p>
+              <p class="text-gray-600">Oft nach dem Essen (bei unklarer Essmenge)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jugendliche -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-3xl text-blue-600">school</span>
+          <div>
+            <h4 class="font-bold text-blue-800 text-lg">Jugendliche (12-18 Jahre)</h4>
+            <p class="text-sm text-blue-600">Pubertät, Autonomie und psychosoziale Faktoren</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Therapieziele (ISPAD/ADA)</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>HbA1c-Zielwert: &lt; 7,0% (möglichst ohne schwere Hypoglykämien)</li>
+              <li>Time-in-Range (70-180 mg/dl): &gt; 60%</li>
+              <li>Time-below-Range (&lt; 70 mg/dl): &lt; 4%</li>
+              <li>Schrittweise Übernahme der Selbstverantwortung</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Herausforderungen der Pubertät</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>Wachstumshormone erhöhen Insulinresistenz um 30-50%</li>
+              <li>Unregelmäßiger Schlaf-/Essrhythmus</li>
+              <li>Psychische Belastung, Diabetes-Distress</li>
+              <li>Soziale Faktoren: Peer-Druck, Partys, Alkohol</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-white rounded-lg p-4">
+          <h5 class="font-semibold text-gray-800 mb-2">Wichtige Themen für Jugendliche</h5>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+            <div class="text-center p-3 bg-blue-100 rounded-lg">
+              <span class="material-symbols-outlined text-blue-600 mb-1">sports_esports</span>
+              <p class="font-medium text-gray-700">Sport & Freizeit</p>
+              <p class="text-xs text-gray-600">Anpassung der Insulindosis vor Aktivitäten</p>
+            </div>
+            <div class="text-center p-3 bg-blue-100 rounded-lg">
+              <span class="material-symbols-outlined text-blue-600 mb-1">nightlife</span>
+              <p class="font-medium text-gray-700">Partys & Alkohol</p>
+              <p class="text-xs text-gray-600">Alkohol senkt BZ – Hypoglykämie-Risiko!</p>
+            </div>
+            <div class="text-center p-3 bg-blue-100 rounded-lg">
+              <span class="material-symbols-outlined text-blue-600 mb-1">directions_car</span>
+              <p class="font-medium text-gray-700">Führerschein</p>
+              <p class="text-xs text-gray-600">BZ-Kontrolle vor jeder Fahrt (&gt; 90 mg/dl)</p>
+            </div>
+            <div class="text-center p-3 bg-blue-100 rounded-lg">
+              <span class="material-symbols-outlined text-blue-600 mb-1">psychology</span>
+              <p class="font-medium text-gray-700">Psychische Gesundheit</p>
+              <p class="text-xs text-gray-600">Screening auf Depression alle 1-2 Jahre</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded-lg">
+          <p class="text-sm text-yellow-800">
+            <strong>Wissenschaftlicher Hinweis:</strong> Studien der Harvard Medical School zeigen, dass Jugendliche
+            mit Diabetes ein 2-3-fach erhöhtes Risiko für depressive Symptome haben. Regelmäßige psychologische
+            Unterstützung verbessert sowohl die Lebensqualität als auch die Stoffwechseleinstellung signifikant.
+          </p>
+        </div>
+      </div>
+
+      <!-- Erwachsene -->
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-3xl text-green-600">person</span>
+          <div>
+            <h4 class="font-bold text-green-800 text-lg">Erwachsene (ab 18 Jahre)</h4>
+            <p class="text-sm text-green-600">Beruf, Familie und Langzeitprävention</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Therapieziele (DDG/ADA)</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li>HbA1c-Zielwert: 6,5-7,0% (individualisiert)</li>
+              <li>Nüchtern-Blutzucker: 80-130 mg/dl</li>
+              <li>Postprandial (2h): &lt; 180 mg/dl</li>
+              <li>Time-in-Range: &gt; 70% empfohlen</li>
+              <li>Blutdruck: &lt; 130/80 mmHg</li>
+              <li>LDL-Cholesterin: &lt; 100 mg/dl (bei KHK &lt; 70 mg/dl)</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-800 mb-2">Langzeitkomplikationen vermeiden</h5>
+            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+              <li><strong>Retinopathie:</strong> Jährliche Augenuntersuchung</li>
+              <li><strong>Nephropathie:</strong> Jährliche Urin-/Nierenwertkontrollen</li>
+              <li><strong>Neuropathie:</strong> Fußuntersuchung alle 6-12 Monate</li>
+              <li><strong>Kardiovaskulär:</strong> Regelmäßige Herzkreislauf-Checks</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-white rounded-lg p-4">
+          <h5 class="font-semibold text-gray-800 mb-3">Alltagsmanagement für Berufstätige</h5>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="bg-green-100 rounded-lg p-3">
+              <h6 class="font-medium text-gray-800 mb-1">Arbeitsplatz</h6>
+              <ul class="list-disc list-inside text-gray-600 text-xs space-y-1">
+                <li>Diabetes-Utensilien am Arbeitsplatz</li>
+                <li>Kollegen informieren (optional)</li>
+                <li>Regelmäßige Pausen einplanen</li>
+                <li>Snacks für Notfälle griffbereit</li>
+              </ul>
+            </div>
+            <div class="bg-green-100 rounded-lg p-3">
+              <h6 class="font-medium text-gray-800 mb-1">Schichtarbeit</h6>
+              <ul class="list-disc list-inside text-gray-600 text-xs space-y-1">
+                <li>Basalrate/Langzeitinsulin anpassen</li>
+                <li>Mahlzeiten an Schichtrhythmus anpassen</li>
+                <li>Häufigere BZ-Kontrollen</li>
+                <li>Ausreichend Schlaf priorisieren</li>
+              </ul>
+            </div>
+            <div class="bg-green-100 rounded-lg p-3">
+              <h6 class="font-medium text-gray-800 mb-1">Reisen</h6>
+              <ul class="list-disc list-inside text-gray-600 text-xs space-y-1">
+                <li>Insulin im Handgepäck (gekühlt)</li>
+                <li>Ärztliche Bescheinigung mitführen</li>
+                <li>Zeitzonen: Basalrate anpassen</li>
+                <li>Doppelte Menge an Zubehör</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-3 bg-pink-100 border border-pink-300 rounded-lg">
+            <h6 class="font-semibold text-pink-800 mb-1 flex items-center gap-2">
+              <span class="material-symbols-outlined text-sm">pregnant_woman</span>
+              Schwangerschaft & Familienplanung
+            </h6>
+            <p class="text-xs text-gray-700">
+              Bei Kinderwunsch: HbA1c &lt; 6,5% vor Konzeption anstreben. Engmaschige Betreuung durch
+              Diabetologen und Gynäkologen. Folsäure-Supplementierung ab 3 Monaten vor geplanter Schwangerschaft.
+              <span class="text-gray-500">(Quelle: DDG S3-Leitlinie Diabetes und Schwangerschaft)</span>
+            </p>
+          </div>
+          <div class="p-3 bg-orange-100 border border-orange-300 rounded-lg">
+            <h6 class="font-semibold text-orange-800 mb-1 flex items-center gap-2">
+              <span class="material-symbols-outlined text-sm">elderly</span>
+              Ältere Erwachsene (&gt; 65 Jahre)
+            </h6>
+            <p class="text-xs text-gray-700">
+              Individualisierte HbA1c-Ziele (7,0-8,0% je nach Gesundheitszustand). Vermeidung von Hypoglykämien
+              hat Priorität. Vereinfachte Therapieschemata können sinnvoll sein.
+              <span class="text-gray-500">(Quelle: ADA Standards of Care 2024)</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ernährung für alle Altersgruppen -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">restaurant</span>
+          Ernährungsempfehlungen (evidenzbasiert)
+        </h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Die Deutsche Diabetes Gesellschaft und die ADA empfehlen keine spezielle „Diabetesdiät", sondern eine
+          ausgewogene, gesunde Ernährung. Das Kohlenhydrat-Counting ist dabei ein zentrales Werkzeug.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm border-t-4 border-green-500">
+            <h5 class="font-semibold text-gray-800 mb-2">Empfohlen</h5>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs">
+              <li>Vollkornprodukte</li>
+              <li>Gemüse & Hülsenfrüchte</li>
+              <li>Fettarme Milchprodukte</li>
+              <li>Fisch (2x/Woche)</li>
+              <li>Pflanzliche Öle</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-t-4 border-yellow-500">
+            <h5 class="font-semibold text-gray-800 mb-2">In Maßen</h5>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs">
+              <li>Rotes Fleisch</li>
+              <li>Weißmehlprodukte</li>
+              <li>Obst (Fruktose beachten)</li>
+              <li>Nüsse</li>
+              <li>Käse</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-t-4 border-red-500">
+            <h5 class="font-semibold text-gray-800 mb-2">Einschränken</h5>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs">
+              <li>Zucker, Süßigkeiten</li>
+              <li>Softdrinks, Säfte</li>
+              <li>Gesättigte Fettsäuren</li>
+              <li>Verarbeitete Lebensmittel</li>
+              <li>Alkohol</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm border-t-4" style="border-color:#20c7b6;">
+            <h5 class="font-semibold text-gray-800 mb-2">Glykämischer Index</h5>
+            <p class="text-gray-600 text-xs mb-2">Lebensmittel mit niedrigem GI (&lt; 55) verursachen langsameren BZ-Anstieg:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 text-xs">
+              <li>Haferflocken (GI 55)</li>
+              <li>Linsen (GI 30)</li>
+              <li>Vollkornbrot (GI 50)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bewegung -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+        <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">fitness_center</span>
+          Körperliche Aktivität und Sport
+        </h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Regelmäßige Bewegung verbessert die Insulinsensitivität, senkt das kardiovaskuläre Risiko und
+          fördert das psychische Wohlbefinden. Die ADA empfiehlt:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4">
+            <h5 class="font-semibold text-gray-800 mb-2">Kinder & Jugendliche</h5>
+            <p class="text-gray-600">Mind. 60 Minuten moderate bis intensive Aktivität täglich</p>
+            <p class="text-xs text-gray-500 mt-2">Quelle: WHO/ISPAD Empfehlungen</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <h5 class="font-semibold text-gray-800 mb-2">Erwachsene</h5>
+            <p class="text-gray-600">150 Min./Woche moderate Aktivität oder 75 Min./Woche intensive Aktivität</p>
+            <p class="text-xs text-gray-500 mt-2">+ 2-3x Krafttraining pro Woche</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <h5 class="font-semibold text-gray-800 mb-2">Vor dem Sport beachten</h5>
+            <ul class="list-disc list-inside text-gray-600 text-xs space-y-1">
+              <li>BZ messen (Ziel: 90-250 mg/dl)</li>
+              <li>Bei &lt; 90: Kohlenhydrate zuführen</li>
+              <li>Traubenzucker bereithalten</li>
+              <li>Insulin ggf. reduzieren</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quellenangaben -->
+      <div class="border-t border-gray-200 pt-6">
+        <h3 class="font-semibold text-gray-700 mb-3 text-sm">Wissenschaftliche Quellen</h3>
+        <ul class="text-xs text-gray-500 space-y-1">
+          <li>• Deutsche Diabetes Gesellschaft (DDG): S3-Leitlinie Therapie des Typ-1-Diabetes, 2023</li>
+          <li>• American Diabetes Association (ADA): Standards of Care in Diabetes, 2024</li>
+          <li>• International Society for Pediatric and Adolescent Diabetes (ISPAD): Clinical Practice Consensus Guidelines, 2022</li>
+          <li>• Robert Koch-Institut (RKI): Diabetes-Surveillance in Deutschland, 2023</li>
+          <li>• Harvard T.H. Chan School of Public Health: Nutrition and Diabetes Research</li>
+          <li>• International Diabetes Federation (IDF): Diabetes Atlas, 10th Edition, 2021</li>
+          <li>• World Health Organization (WHO): Guidelines on Physical Activity, 2020</li>
+        </ul>
+        <p class="text-xs text-gray-400 mt-3 italic">
+          Hinweis: Diese Informationen dienen der allgemeinen Aufklärung und ersetzen keine individuelle
+          Beratung durch Ihren behandelnden Arzt oder Ihr Diabetes-Team. Therapieziele und -strategien
+          sollten stets individuell angepasst werden.
+        </p>
+      </div>
     </section>
+
+
 
     <!-- Tipps für die Schule und Lehrer -->
     <section id="tipps" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-      <h2 class="text-2xl font-bold mb-4">Tipps für die Schule und Lehrer</h2>
-      <p class="text-gray-600 mb-4">
-        Ein offener Umgang mit Diabetes schafft Sicherheit. Lehrer sollten keine Hemmungen haben,
-        nachzufragen oder klare Absprachen mit Eltern und Schülern zu treffen.
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-4xl" style="color:#20c7b6;">school</span>
+        <h2 class="text-2xl font-bold">Leitfaden für Lehrkräfte und Schulen</h2>
+      </div>
+
+      <p class="text-gray-600 mb-6">
+        Ein evidenzbasierter Umgang mit Diabetes im schulischen Umfeld ist entscheidend für die Sicherheit und das
+        Wohlbefinden betroffener Schülerinnen und Schüler. Die folgenden Empfehlungen basieren auf aktuellen
+        Leitlinien der Deutschen Diabetes Gesellschaft (DDG), der American Diabetes Association (ADA) sowie
+        Erkenntnissen führender Forschungseinrichtungen.
       </p>
-      <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-        <li><strong>Flexibilität</strong>: Schüler müssen jederzeit messen oder essen dürfen.</li>
-        <li><strong>Prüfungssituationen</strong>: Zusätzliche Pausen oder kurze Unterbrechungen ermöglichen.</li>
-        <li><strong>Sport und Ausflüge</strong>: Blutzuckermessung und Verpflegung mit einplanen.</li>
-        <li><strong>Vertrauen</strong>: Schüler ernst nehmen, wenn sie sich unwohl fühlen.</li>
-      </ul>
-      <p class="text-gray-600 mb-4">
-        Eine <em>informerter Lehrer</em> kann im Ernstfall Leben retten. Deshalb sollten alle beteiligten Personen
-        wissen,
-        wie eine Hypo- oder Hyperglykämie erkannt wird.
-      </p>
+
+      <!-- Statistiken -->
+      <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 mb-8 border-l-4" style="border-color:#20c7b6;">
+        <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">bar_chart</span>
+          Wichtige Fakten und Zahlen
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">~32.000</p>
+            <p class="text-gray-600">Kinder und Jugendliche unter 20 Jahren mit Typ-1-Diabetes in Deutschland</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: RKI, 2023</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">2.300+</p>
+            <p class="text-gray-600">Neuerkrankungen pro Jahr bei Kindern unter 15 Jahren in Deutschland</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: DDG, 2023</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">4-6x</p>
+            <p class="text-gray-600">Blutzuckermessungen pro Tag bei intensivierter Therapie erforderlich</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: ADA Standards of Care</p>
+          </div>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-2xl font-bold" style="color:#20c7b6;">70-180</p>
+            <p class="text-gray-600">mg/dl – empfohlener Zielbereich für Blutzucker bei Kindern</p>
+            <p class="text-xs text-gray-400 mt-1">Quelle: ISPAD Guidelines</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Praktische Handlungsempfehlungen -->
+      <h3 class="font-bold text-gray-800 mb-4 text-lg">Praktische Handlungsempfehlungen für den Schulalltag</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Empfehlung 1 -->
+        <div class="bg-gray-50 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="material-symbols-outlined" style="color:#20c7b6;">schedule</span>
+            <h4 class="font-semibold text-gray-800">Flexibilität bei Messungen und Mahlzeiten</h4>
+          </div>
+          <p class="text-gray-600 text-sm mb-3">
+            Schülerinnen und Schüler mit Diabetes müssen jederzeit die Möglichkeit haben, ihren Blutzucker zu messen
+            und bei Bedarf Kohlenhydrate zu sich zu nehmen. Dies ist medizinisch notwendig und kein Verstoß gegen
+            Schulregeln.
+          </p>
+          <div class="bg-white rounded p-3 text-sm">
+            <p class="font-medium text-gray-700 mb-1">Empfehlung (DDG/ADA):</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              <li>Erlaubnis zum Essen und Trinken im Unterricht</li>
+              <li>Freier Zugang zu Messgeräten und Insulin</li>
+              <li>Möglichkeit, den Raum bei Bedarf zu verlassen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Empfehlung 2 -->
+        <div class="bg-gray-50 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="material-symbols-outlined" style="color:#20c7b6;">edit_note</span>
+            <h4 class="font-semibold text-gray-800">Prüfungssituationen und Leistungsbewertung</h4>
+          </div>
+          <p class="text-gray-600 text-sm mb-3">
+            Schwankende Blutzuckerwerte können die kognitive Leistungsfähigkeit erheblich beeinflussen.
+            Studien zeigen, dass sowohl Hypo- als auch Hyperglykämie Aufmerksamkeit und Gedächtnis beeinträchtigen.
+          </p>
+          <div class="bg-white rounded p-3 text-sm">
+            <p class="font-medium text-gray-700 mb-1">Wissenschaftlich fundierte Maßnahmen:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              <li>Zeitverlängerung bei Klassenarbeiten (10-25%)</li>
+              <li>Unterbrechung bei Stoffwechselentgleisung</li>
+              <li>Nachholtermine bei akuten Problemen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Empfehlung 3 -->
+        <div class="bg-gray-50 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="material-symbols-outlined" style="color:#20c7b6;">directions_run</span>
+            <h4 class="font-semibold text-gray-800">Sportunterricht und körperliche Aktivität</h4>
+          </div>
+          <p class="text-gray-600 text-sm mb-3">
+            Körperliche Aktivität beeinflusst den Blutzucker erheblich. Die ADA empfiehlt regelmäßige Bewegung,
+            jedoch mit entsprechender Vorbereitung und Monitoring.
+          </p>
+          <div class="bg-white rounded p-3 text-sm">
+            <p class="font-medium text-gray-700 mb-1">Vor und während des Sports:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              <li>Blutzuckerkontrolle vor Beginn (Ziel: 90-250 mg/dl)</li>
+              <li>Zusätzliche Kohlenhydrate bei Werten &lt; 90 mg/dl</li>
+              <li>Traubenzucker griffbereit halten</li>
+              <li>Kein Sport bei Ketonkörpern im Urin</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Empfehlung 4 -->
+        <div class="bg-gray-50 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="material-symbols-outlined" style="color:#20c7b6;">hiking</span>
+            <h4 class="font-semibold text-gray-800">Klassenfahrten und Exkursionen</h4>
+          </div>
+          <p class="text-gray-600 text-sm mb-3">
+            Mehrtägige Ausflüge erfordern besondere Planung. Eine frühzeitige Abstimmung mit Eltern und
+            behandelnden Ärzten ist unerlässlich.
+          </p>
+          <div class="bg-white rounded p-3 text-sm">
+            <p class="font-medium text-gray-700 mb-1">Checkliste für Lehrkräfte:</p>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              <li>Schriftlicher Notfallplan mit Kontaktdaten</li>
+              <li>Ausreichend Insulin, Teststreifen, Traubenzucker</li>
+              <li>Kühlmöglichkeit für Insulin (2-8°C)</li>
+              <li>Einweisung der Begleitpersonen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notfallprotokoll -->
+      <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8" id="Notfallprotokoll">
+        <h3 class="font-bold text-red-800 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-red-600">emergency</span>
+          Notfallprotokoll für Lehrkräfte
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-red-700 mb-2">Bei Unterzuckerung (Hypoglykämie)</h4>
+            <p class="text-sm text-gray-600 mb-2">Symptome: Zittern, Schwitzen, Blässe, Verwirrtheit, Herzrasen</p>
+            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+              <li>Sofort 15-20g schnelle Kohlenhydrate geben</li>
+              <li>z.B. 200ml Fruchtsaft oder 4-5 Traubenzucker</li>
+              <li>Nach 15 Min. erneut messen</li>
+              <li>Bei Bewusstlosigkeit: <strong>Notruf 112</strong>, stabile Seitenlage</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="font-semibold text-red-700 mb-2">Bei Überzuckerung (Hyperglykämie)</h4>
+            <p class="text-sm text-gray-600 mb-2">Symptome: Starker Durst, häufiges Wasserlassen, Übelkeit, Müdigkeit</p>
+            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+              <li>Eltern/Erziehungsberechtigte informieren</li>
+              <li>Viel Wasser trinken lassen</li>
+              <li>Keinen Sport ausüben lassen</li>
+              <li>Bei Erbrechen oder Bewusstseinstrübung: <strong>Notruf 112</strong></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schulungsempfehlung -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-blue-800 mb-3 flex items-center gap-2">
+          <span class="material-symbols-outlined text-blue-600">menu_book</span>
+          Empfehlung: Diabetes-Schulung für Schulpersonal
+        </h3>
+        <p class="text-gray-700 text-sm mb-4">
+          Die Deutsche Diabetes Gesellschaft und die International Society for Pediatric and Adolescent Diabetes (ISPAD)
+          empfehlen eine grundlegende Schulung des pädagogischen Personals. Studien der Harvard Medical School zeigen,
+          dass geschultes Personal Notfallsituationen signifikant besser bewältigt.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-800 mb-1">Grundlagen-Modul</p>
+            <p class="text-gray-600">Pathophysiologie, Therapieformen, Alltag mit Diabetes</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-800 mb-1">Notfall-Modul</p>
+            <p class="text-gray-600">Erkennung und Erstversorgung von Hypo-/Hyperglykämie</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-800 mb-1">Praxis-Modul</p>
+            <p class="text-gray-600">Blutzuckermessung, Insulinpens, CGM-Systeme</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rechtliche Hinweise -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+        <h3 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+          <span class="material-symbols-outlined" style="color:#20c7b6;">gavel</span>
+          Rechtliche Rahmenbedingungen in Deutschland
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">
+          Kinder mit Diabetes haben gemäß dem Sozialgesetzbuch (SGB) und dem Allgemeinen Gleichbehandlungsgesetz (AGG)
+          Anspruch auf gleichberechtigte Teilhabe am Schulunterricht. Schulen sind verpflichtet, angemessene
+          Vorkehrungen zu treffen.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <li>Nachteilsausgleich kann formlos beantragt werden (§ 126 SGB IX)</li>
+          <li>Lehrkräfte dürfen bei entsprechender Einweisung Blutzucker messen</li>
+          <li>Insulingabe durch Nicht-Mediziner ist bei Delegation durch Eltern zulässig</li>
+          <li>Individuelle Gesundheitspläne sollten schriftlich dokumentiert werden</li>
+        </ul>
+      </div>
+
+      <!-- Quellenangaben -->
+      <div class="border-t border-gray-200 pt-6">
+        <h3 class="font-semibold text-gray-700 mb-3 text-sm">Wissenschaftliche Quellen und weiterführende Literatur</h3>
+        <ul class="text-xs text-gray-500 space-y-1">
+          <li>• Deutsche Diabetes Gesellschaft (DDG): S3-Leitlinie zur Therapie des Typ-1-Diabetes, 2023</li>
+          <li>• American Diabetes Association (ADA): Standards of Care in Diabetes, 2024</li>
+          <li>• Robert Koch-Institut (RKI): Diabetes-Surveillance in Deutschland, 2023</li>
+          <li>• International Society for Pediatric and Adolescent Diabetes (ISPAD): Clinical Practice Consensus Guidelines, 2022</li>
+          <li>• Harvard T.H. Chan School of Public Health: Diabetes Management in Schools, Research Publications</li>
+          <li>• World Health Organization (WHO): Global Report on Diabetes, 2021</li>
+        </ul>
+        <p class="text-xs text-gray-400 mt-3 italic">
+          Hinweis: Die hier bereitgestellten Informationen dienen der allgemeinen Orientierung und ersetzen
+          keine individuelle medizinische Beratung. Bei spezifischen Fragen wenden Sie sich bitte an die
+          behandelnden Ärzte oder diabetologische Facheinrichtungen.
+        </p>
+      </div>
     </section>
 
     <!-- Podcast & Medien -->
     <section id="podcast" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-      <h2 class="text-2xl font-bold mb-4">Podcast &amp; Medien</h2>
-      <p class="text-gray-600 mb-4">
-        Medien helfen, das Thema Diabetes nahbar zu machen. Podcasts mit Erfahrungsberichten zeigen,
-        wie Schüler ihren Alltag meistern und welche Strategien sie nutzen.
-        Experteninterviews mit Diabetologen oder Ernährungswissenschaftlern geben wissenschaftlich fundierte Einblicke.
-      </p>
-      <iframe data-testid="embed-iframe" style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/4bZsN20swg33SNmQgeeF0Z?utm_source=generator" width="100%"
-        height="152" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <div class="flex flex-col lg:flex-row gap-8 items-start">
+        <!-- Podcast Info -->
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-4xl" style="color:#20c7b6;">podcasts</span>
+            <h2 class="text-2xl font-bold">Podcast: Aktuelle Forschungen bei Diabetesbehandlung</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            In dieser Podcast-Episode diskutieren wir – gemeinsam mit meinem Kollegen – die neuesten wissenschaftlichen
+            Erkenntnisse zur Behandlung von Diabetes mellitus. Wir beleuchten aktuelle Studien, innovative Therapieansätze
+            und zukünftige Entwicklungen in der Diabetesforschung.
+          </p>
+          <div class="bg-gray-50 rounded-lg p-4 mb-4">
+            <h3 class="font-semibold text-gray-800 mb-2">Themen dieser Episode:</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              <li>Fortschritte bei der Insulintherapie und Smart-Insulin-Systeme</li>
+              <li>Neue Erkenntnisse zur Betazell-Regeneration</li>
+              <li>Künstliche Bauchspeicheldrüse und automatisierte Insulinabgabe</li>
+              <li>Präventionsstrategien und Früherkennung bei Typ-1-Diabetes</li>
+            </ul>
+          </div>
+          <p class="text-sm text-gray-500 italic mb-4">
+            Hinweis: Dieser Podcast dient ausschließlich der Information und ersetzt keine ärztliche Beratung.
+            Bei Fragen zu Ihrer Gesundheit wenden Sie sich bitte an medizinisches Fachpersonal.
+          </p>
+        </div>
+      </div>
+      <!-- Spotify Embed -->
+      <div class="mt-6">
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/episode/4bZsN20swg33SNmQgeeF0Z?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
     </section>
+
+    <!-- Blutzucker-Check -->
+    <section id="blutzucker-check" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-4xl" style="color:#20c7b6;">monitor_heart</span>
+        <h2 class="text-2xl font-bold">Blutzucker-Check</h2>
+      </div>
+      <p class="text-gray-600 mb-6">
+        Mit diesem Formular können Sie Ihren aktuellen Blutzuckerwert einordnen. Geben Sie bitte Ihren gemessenen Wert
+        ein und wählen Sie den Messzeitpunkt aus. Wir helfen Ihnen, die Ergebnisse wissenschaftlich fundiert zu interpretieren.
+      </p>
+
+      <form id="blutzuckerForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Blutzuckerwert -->
+          <div>
+            <label for="blutzuckerwert" class="block text-sm font-medium text-gray-700 mb-2">
+              Blutzuckerwert (mg/dl) <span class="text-red-500">*</span>
+            </label>
+            <input type="number" id="blutzuckerwert" name="blutzuckerwert" min="20" max="600" step="1"
+              placeholder="z. B. 95"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-transparent transition"
+              style="outline-color:#20c7b6;" required>
+            <p class="text-xs text-gray-500 mt-1">Bitte geben Sie einen Wert zwischen 20 und 600 mg/dl ein.</p>
+          </div>
+
+          <!-- Messzeitpunkt -->
+          <div>
+            <label for="messzeitpunkt" class="block text-sm font-medium text-gray-700 mb-2">
+              Messzeitpunkt <span class="text-red-500">*</span>
+            </label>
+            <select id="messzeitpunkt" name="messzeitpunkt"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-transparent transition"
+              style="outline-color:#20c7b6;" required>
+              <option value="">Bitte wählen...</option>
+              <option value="nuechtern">Nüchtern (mindestens 8 Stunden ohne Nahrung)</option>
+              <option value="postprandial">Nach dem Essen (1-2 Stunden nach einer Mahlzeit)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button type="submit"
+            class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium text-white transition hover:opacity-90"
+            style="background-color:#20c7b6;">
+            <span class="material-symbols-outlined">analytics</span>
+            Wert überprüfen
+          </button>
+        </div>
+      </form>
+
+      <!-- Ergebnis -->
+      <div id="ergebnisContainer" class="mt-8 hidden">
+        <div id="ergebnisBox" class="rounded-lg p-6 border-2">
+          <div class="flex items-start gap-4">
+            <span id="ergebnisIcon" class="material-symbols-outlined text-4xl"></span>
+            <div>
+              <h3 id="ergebnisTitel" class="text-xl font-bold mb-2"></h3>
+              <p id="ergebnisText" class="mb-3"></p>
+              <p id="ergebnisHinweis" class="text-sm italic"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Referenzwerte -->
+      <div class="mt-8 bg-gray-50 rounded-lg p-6">
+        <h3 class="font-semibold text-gray-800 mb-4">Referenzwerte zur Orientierung</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-300">
+                <th class="text-left py-2 pr-4 font-semibold">Kategorie</th>
+                <th class="text-left py-2 pr-4 font-semibold">Nüchtern (mg/dl)</th>
+                <th class="text-left py-2 font-semibold">Nach dem Essen (mg/dl)</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600">
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500"></span> Unterzuckerung (Hypoglykämie)
+                </td>
+                <td class="py-2 pr-4">&lt; 70</td>
+                <td class="py-2">&lt; 70</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-green-500"></span> Normalbereich
+                </td>
+                <td class="py-2 pr-4">70 – 100</td>
+                <td class="py-2">&lt; 140</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-yellow-500"></span> Erhöht (Prädiabetes)
+                </td>
+                <td class="py-2 pr-4">100 – 125</td>
+                <td class="py-2">140 – 199</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-600"></span> Überzuckerung (Hyperglykämie)
+                </td>
+                <td class="py-2 pr-4">&ge; 126</td>
+                <td class="py-2">&ge; 200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-500 mt-4">
+          Quelle: Deutsche Diabetes Gesellschaft (DDG) und American Diabetes Association (ADA).
+          Diese Werte dienen nur zur Orientierung und ersetzen keine medizinische Diagnose.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blutzucker-Check JavaScript -->
+    <script>
+      document.getElementById('blutzuckerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const wert = parseFloat(document.getElementById('blutzuckerwert').value);
+        const zeitpunkt = document.getElementById('messzeitpunkt').value;
+
+        if (!wert || !zeitpunkt) {
+          alert('Bitte füllen Sie alle Felder aus.');
+          return;
+        }
+
+        const container = document.getElementById('ergebnisContainer');
+        const box = document.getElementById('ergebnisBox');
+        const icon = document.getElementById('ergebnisIcon');
+        const titel = document.getElementById('ergebnisTitel');
+        const text = document.getElementById('ergebnisText');
+        const hinweis = document.getElementById('ergebnisHinweis');
+
+        let ergebnis = {};
+
+        // Bewertung basierend auf Messzeitpunkt
+        if (zeitpunkt === 'nuechtern') {
+          if (wert < 70) {
+            ergebnis = {
+              status: 'hypoglykaemie',
+              titel: 'Unterzuckerung (Hypoglykämie)',
+              text: `Ihr Nüchtern-Blutzuckerwert von ${wert} mg/dl liegt unterhalb des Normalbereichs. Eine Hypoglykämie kann zu Symptomen wie Zittern, Schwitzen, Herzrasen oder Konzentrationsstörungen führen.`,
+              hinweis: 'Bitte nehmen Sie zeitnah schnell wirkende Kohlenhydrate zu sich (z. B. Traubenzucker, Fruchtsaft) und konsultieren Sie bei wiederkehrenden niedrigen Werten Ihren behandelnden Arzt.',
+              farbe: 'border-red-500 bg-red-50',
+              iconName: 'warning',
+              iconFarbe: 'text-red-500'
+            };
+          } else if (wert >= 70 && wert <= 100) {
+            ergebnis = {
+              status: 'normal',
+              titel: 'Normalbereich',
+              text: `Ihr Nüchtern-Blutzuckerwert von ${wert} mg/dl liegt im optimalen Bereich. Dies deutet auf eine gesunde Blutzuckerregulation hin.`,
+              hinweis: 'Sehr gut! Behalten Sie Ihren gesunden Lebensstil bei. Regelmäßige Kontrollen werden dennoch empfohlen.',
+              farbe: 'border-green-500 bg-green-50',
+              iconName: 'check_circle',
+              iconFarbe: 'text-green-500'
+            };
+          } else if (wert > 100 && wert < 126) {
+            ergebnis = {
+              status: 'praediabetes',
+              titel: 'Erhöhter Wert (Prädiabetes)',
+              text: `Ihr Nüchtern-Blutzuckerwert von ${wert} mg/dl liegt über dem Normalbereich. Dies kann auf eine gestörte Glukosetoleranz (Prädiabetes) hindeuten.`,
+              hinweis: 'Wir empfehlen Ihnen, einen Arzt aufzusuchen, um weitere Untersuchungen durchführen zu lassen. Durch Lebensstiländerungen kann ein Fortschreiten oft verhindert werden.',
+              farbe: 'border-yellow-500 bg-yellow-50',
+              iconName: 'info',
+              iconFarbe: 'text-yellow-600'
+            };
+          } else {
+            ergebnis = {
+              status: 'hyperglykaemie',
+              titel: 'Überzuckerung (Hyperglykämie)',
+              text: `Ihr Nüchtern-Blutzuckerwert von ${wert} mg/dl ist deutlich erhöht. Nüchternwerte ab 126 mg/dl können auf einen Diabetes mellitus hinweisen.`,
+              hinweis: 'Bitte suchen Sie zeitnah einen Arzt auf, um eine genaue Diagnose zu erhalten. Eine frühzeitige Behandlung ist wichtig für Ihre Gesundheit.',
+              farbe: 'border-red-600 bg-red-50',
+              iconName: 'emergency',
+              iconFarbe: 'text-red-600'
+            };
+          }
+        } else if (zeitpunkt === 'postprandial') {
+          if (wert < 70) {
+            ergebnis = {
+              status: 'hypoglykaemie',
+              titel: 'Unterzuckerung (Hypoglykämie)',
+              text: `Ihr postprandialer Blutzuckerwert von ${wert} mg/dl liegt unterhalb des Normalbereichs. Eine Hypoglykämie nach dem Essen ist ungewöhnlich und sollte abgeklärt werden.`,
+              hinweis: 'Bitte nehmen Sie zeitnah schnell wirkende Kohlenhydrate zu sich und konsultieren Sie Ihren behandelnden Arzt.',
+              farbe: 'border-red-500 bg-red-50',
+              iconName: 'warning',
+              iconFarbe: 'text-red-500'
+            };
+          } else if (wert >= 70 && wert < 140) {
+            ergebnis = {
+              status: 'normal',
+              titel: 'Normalbereich',
+              text: `Ihr Blutzuckerwert von ${wert} mg/dl nach dem Essen liegt im normalen Bereich. Ihr Körper reguliert den Blutzucker nach der Mahlzeit gut.`,
+              hinweis: 'Ausgezeichnet! Ihre Werte deuten auf eine gesunde Blutzuckerregulation hin. Behalten Sie Ihre gesunden Gewohnheiten bei.',
+              farbe: 'border-green-500 bg-green-50',
+              iconName: 'check_circle',
+              iconFarbe: 'text-green-500'
+            };
+          } else if (wert >= 140 && wert < 200) {
+            ergebnis = {
+              status: 'praediabetes',
+              titel: 'Erhöhter Wert (Prädiabetes)',
+              text: `Ihr postprandialer Blutzuckerwert von ${wert} mg/dl liegt über dem Normalbereich. Dies kann auf eine gestörte Glukosetoleranz hindeuten.`,
+              hinweis: 'Wir empfehlen Ihnen, einen Arzt für weitere Untersuchungen aufzusuchen. Mit geeigneten Maßnahmen lässt sich oft eine Normalisierung erreichen.',
+              farbe: 'border-yellow-500 bg-yellow-50',
+              iconName: 'info',
+              iconFarbe: 'text-yellow-600'
+            };
+          } else {
+            ergebnis = {
+              status: 'hyperglykaemie',
+              titel: 'Überzuckerung (Hyperglykämie)',
+              text: `Ihr postprandialer Blutzuckerwert von ${wert} mg/dl ist deutlich erhöht. Werte ab 200 mg/dl nach dem Essen können auf einen Diabetes mellitus hinweisen.`,
+              hinweis: 'Bitte suchen Sie zeitnah einen Arzt auf, um eine genaue Diagnose zu erhalten und gegebenenfalls eine Behandlung einzuleiten.',
+              farbe: 'border-red-600 bg-red-50',
+              iconName: 'emergency',
+              iconFarbe: 'text-red-600'
+            };
+          }
+        }
+
+        // Ergebnis anzeigen
+        box.className = `rounded-lg p-6 border-2 ${ergebnis.farbe}`;
+        icon.textContent = ergebnis.iconName;
+        icon.className = `material-symbols-outlined text-4xl ${ergebnis.iconFarbe}`;
+        titel.textContent = ergebnis.titel;
+        text.textContent = ergebnis.text;
+        hinweis.textContent = ergebnis.hinweis;
+
+        container.classList.remove('hidden');
+        container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    </script>
 
     <!-- Kontakt -->
     <section id="kontakt" class="mt-12 bg-white rounded-2xl shadow-sm p-8">
